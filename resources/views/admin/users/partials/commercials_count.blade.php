@@ -1,0 +1,1 @@
+{{ $user->commercials_count }}

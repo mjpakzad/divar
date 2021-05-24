@@ -1,0 +1,1 @@
+{{ jdate($commercial->created_at)->format('d F Y') }}

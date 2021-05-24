@@ -1,0 +1,1 @@
+<span class="label label-{{ ($category->status ? 'success' : 'warning') }}">{{ $category->status ? 'فعال' : 'غیرفعال' }}</span>
