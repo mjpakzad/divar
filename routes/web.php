@@ -1,9 +1,24 @@
 <?php
-Route::get('mj/{id}', function ($id) {
-    Auth::loginUsingId($id);
-});
-Auth::routes();
-Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware(['auth', /*'twoFactor'*/])->group(function () {
+
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+//Route::get('mj/{id}', function ($id) {
+//    Auth::loginUsingId($id);
+//});
+//Auth::routes();
+/**
+Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware(['auth', 'twoFactor'])->group(function () {
     Route::get('/', 'AppController@index')->name('app.index');
     Route::get('cats/{cat}/ajax', 'CatController@ajax')->name('cats.ajax');
     Route::resource('cats', 'CatController')->only(['index', 'show']);
@@ -126,3 +141,4 @@ Route::name('frontend.')->namespace('Frontend')->group(function () {
     Route::get('{city}/{category}', 'CitiesController@category')->name('cities.category');
     Route::get('{city}', 'CitiesController@show')->name('cities.show');
 });
+*/
