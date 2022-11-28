@@ -1,1 +1,0 @@
-{{ $category->parent->name ?? 'دسته‌بندی اصلی' }}

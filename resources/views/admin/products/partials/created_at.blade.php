@@ -1,1 +1,0 @@
-{{ jdate($product->created_at)->format('d F Y') }}
